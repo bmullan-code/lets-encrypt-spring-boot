@@ -73,5 +73,5 @@ Tomcat started on port(s): 8443 (https) with context path ''
 
 ## 6) Verify the service
 
-
+![screenshot](https://raw.githubusercontent.com/bmullan-pivotal/lets-encrypt-spring-boot/master/orono-screenshot.png)
 
