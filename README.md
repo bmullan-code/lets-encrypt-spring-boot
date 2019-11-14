@@ -48,13 +48,30 @@ For convenience, the script keystore.sh can be run from your certificate directo
 * add the following properties to your application.yaml (replacing password and alias from step 2)
 ```
 server:
+  port: 8443
   ssl:
     enabled: true
     key-store: classpath:keystore.jks
-    key-alias: ***alias***
-    key-store-password: ***password***
+    key-alias: tomcat
+    key-store-password: paspas
     key-store-provider: SUN
     key-store-type: JKS
+
 ```
+
+## 5) Run the service
+
+* Run the service 
+```
+mvn spring-boot:run
+```
+
+* At startup you should see the message, showing that it is using ***https***
+```
+Tomcat started on port(s): 8443 (https) with context path ''
+```
+
+## 6) Verify the service
+
 
 
