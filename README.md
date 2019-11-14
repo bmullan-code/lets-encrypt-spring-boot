@@ -32,7 +32,9 @@ openssl pkcs12 -export -in cert.pem -inkey privkey.pem \
 
 Replace the 3 occurrences of ***password*** and ***alias*** from step 2.
 ```
-    keytool -importkeystore -deststorepass ***password*** -destkeypass ***password*** -destkeystore keystore.jks \
-    -srckeystore keystore.p12 -srcstoretype PKCS12 -srcstorepass ***password***  -alias ***alias***
+    keytool -importkeystore -deststorepass ***password*** -destkeypass ***password*** \ 
+    -destkeystore keystore.jks -srckeystore keystore.p12 -srcstoretype PKCS12 \
+    -srcstorepass ***password***  -alias ***alias***
+```
 
 For convenience, the script keystore.sh can be run from your certificate directory to perform steps 2 & 3. 
