@@ -41,7 +41,7 @@ For convenience, the script keystore.sh can be run from your certificate directo
 
 ## 4) Create the Spring Boot Service
 
-* Use start.spring.io to create a new application selecting the web depenedency and any others you need. 
+* Use [start.spring.io](start.spring.io) to create a new application selecting the web depenedency and any others you need. 
 
 * Copy the _keystore.jks_ from step 3 to the _/src/main/resources_ directory under your project. 
 
