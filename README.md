@@ -38,3 +38,23 @@ Replace the 3 occurrences of ***password*** and ***alias*** from step 2.
 ```
 
 For convenience, the script keystore.sh can be run from your certificate directory to perform steps 2 & 3. 
+
+## 4) Create the Spring Boot Service
+
+* Use start.spring.io to create a new application selecting the web depenedency and any others you need. 
+
+* Copy the _keystore.jks_ from step 3 to the _/src/main/resources_ directory under your project. 
+
+* add the following properties to your application.yaml (replacing password and alias from step 2)
+```
+server:
+  ssl:
+    enabled: true
+    key-store: classpath:keystore.jks
+    key-alias: ***alias***
+    key-store-password: ***password***
+    key-store-provider: SUN
+    key-store-type: JKS
+```
+
+
